@@ -1,6 +1,7 @@
 # 🚀 Agile Board Skill for AI Agents
 
 <div align="center">
+  <img src="assets/logo.svg" alt="Agile Board Skill Logo" width="200" height="200" />
   <p>Empower your AI Agents to autonomously manage Agile Boards (GitHub Issues, Supabase, etc.) with extreme token efficiency.</p>
 </div>
 
