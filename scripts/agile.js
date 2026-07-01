@@ -6,8 +6,12 @@ import { GithubAdapter } from './adapters/github.js';
 const backend = process.env.AGILE_BACKEND || 'github';
 let adapter;
 
-if (backend === 'github') {
+if (backend === 'github' || backend === 'github-projects') {
   adapter = new GithubAdapter();
+  if (backend === 'github-projects' && !adapter.isProjectMode) {
+    console.error("Error: Backend is set to 'github-projects' but config.json is missing or does not configure a project.");
+    process.exit(1);
+  }
 } else {
   console.error(`Backend ${backend} not supported yet.`);
   process.exit(1);

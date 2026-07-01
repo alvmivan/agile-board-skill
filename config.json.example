@@ -1,0 +1,12 @@
+{
+  "projectNumber": 6,
+  "repoOwner": "YOUR_GITHUB_USERNAME_OR_ORG",
+  "repoName": "YOUR_REPO_NAME",
+  "projectId": "PROJECT_NODE_ID_E_G_PVT_kwHO...",
+  "fieldId": "STATUS_FIELD_NODE_ID_E_G_PVTSSF_...",
+  "statusMap": {
+    "To Do": "OPTION_ID_1",
+    "In Progress": "OPTION_ID_2",
+    "Done": "OPTION_ID_3"
+  }
+}

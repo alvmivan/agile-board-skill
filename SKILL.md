@@ -57,6 +57,36 @@ To add progress updates or notes to a task.
 node scripts/agile.js comment <issue-number> "Starting work on this task. Found X and Y."
 ```
 
+## GitHub Projects V2 Configuration (Optional)
+
+If you are using GitHub Projects V2 to manage your agile board columns instead of repository labels, you can configure the skill by creating a `config.json` in the root of the workspace.
+
+When `config.json` is present and contains `projectNumber`, the `GithubAdapter` automatically runs in **Project Board Mode**.
+
+### config.json Format
+
+```json
+{
+  "projectNumber": 6,
+  "repoOwner": "alvmivan",
+  "repoName": "agile-board-skill",
+  "projectId": "PVT_kwHOAdxhW84A3vOP",
+  "fieldId": "PVTSSF_lAHOAdxhW84A3vOPzgs0uCo",
+  "statusMap": {
+    "To Do": "f75ad846",
+    "In Progress": "47fc9ee4",
+    "Done": "98236657"
+  }
+}
+```
+
+- **projectNumber**: The numeric identifier of the GitHub Project board (e.g. from its URL `https://github.com/users/owner/projects/6`).
+- **repoOwner** & **repoName**: Target repository to create/assign/comment on issues.
+- **projectId**: The GraphQL node ID for the Project (run `gh project list --owner <owner>` to find it).
+- **fieldId**: The GraphQL node ID of the "Status" field (run `gh project field-list <number> --owner <owner> --format json` to find it).
+- **statusMap**: A mapping from standard task statuses (`"To Do"`, `"In Progress"`, `"Done"`) to their respective SingleSelect option IDs in the project board.
+
 ## Important Notes
 - Always run these commands using the `run_command` tool.
 - Ensure you are in the directory where `scripts/agile.js` is located when executing the commands.
+
