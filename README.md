@@ -3,6 +3,10 @@
 <div align="center">
   <img src="assets/logo.svg" alt="Agile Board Skill Logo" width="200" height="200" />
   <p>Empower your AI Agents to autonomously manage Agile Boards (GitHub Issues, Supabase, etc.) with extreme token efficiency.</p>
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+  [![No Dependencies](https://img.shields.io/badge/dependencies-none-success.svg)](#)
 </div>
 
 ---
@@ -40,7 +44,9 @@ The agent autonomously runs these commands in the background:
 
 ## 🤝 Extending
 
-Want to add Jira, Trello, or Supabase? Just add a new file in `scripts/adapters/` that implements the `AgileAdapter` interface!
+Want to add Jira, Trello, or Supabase? It's incredibly easy thanks to the Adapter Pattern. 
+
+Check out our [Contributing Guide](CONTRIBUTING.md) to learn how to build and register your own adapter in just a few lines of code. PRs are highly appreciated!
 
 ---
 *Built for the next generation of autonomous coding agents.*
